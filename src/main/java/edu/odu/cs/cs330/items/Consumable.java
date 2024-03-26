@@ -94,6 +94,9 @@ public class Consumable extends Item {
         super.name = snr.next();
 
         // Complete this method
+        this.effect = snr.next();
+        this.uses = snr.nextInt();
+        this.stackable = true;
     }
 
     /**
