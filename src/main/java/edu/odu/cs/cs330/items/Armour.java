@@ -47,14 +47,13 @@ public class Armour extends Item {
     public Armour()
     {
         // Initialize all data members (including those inherited from Item)
-    	this.name = "";
+    	super("", false);
     	this.durability = 0;
     	this.defense = 0;
     	this.material = "";
     	this.modifier = "";
     	this.modiferLevel = 0;
     	this.element = "";
-    	this.stackable = false;
     	
     }
 
@@ -209,6 +208,13 @@ public class Armour extends Item {
         super.name   = snr.next();
 
         // Complete this method
+        this.material = snr.next();
+        this.durability = snr.nextInt();
+        this.defense = snr.nextInt();
+        this.modifier = snr.next();
+        this.modiferLevel = snr.nextInt();
+        this.element = snr.next();
+        this.stackable = false;
     }
 
     /**
@@ -227,7 +233,13 @@ public class Armour extends Item {
     @Override
     public String toString()
     {
-        return "Implement This Function";
+        return "  Nme: " + super.getName() 
+        	+ "\n  Dur: " + this.getDurability()
+        	+ "\n  Def: " + this.getDefense()
+        	+ "\n  Mtl: " + this.getMaterial()
+        	+ "\n  Mdr: " + this.getModifier() 
+        	+ " (Lvl " + this.getModifierLevel() + ")"
+        	+ "\n  Emt: " + this.getElement() + "\n";
     }
 }
 
