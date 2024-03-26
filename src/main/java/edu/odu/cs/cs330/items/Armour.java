@@ -47,6 +47,14 @@ public class Armour extends Item {
     public Armour()
     {
         // Initialize all data members (including those inherited from Item)
+    	this.name = "";
+    	this.durability = 0;
+    	this.defense = 0;
+    	this.material = "";
+    	this.modifier = "";
+    	this.modiferLevel = 0;
+    	this.element = "";
+    	
     }
 
     /**
