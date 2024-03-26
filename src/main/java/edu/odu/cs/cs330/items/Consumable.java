@@ -114,6 +114,9 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        return "Implement this function";
+        return "  Nme: " + super.getName()
+        	+ "\n  Eft: " + this.getEffect()
+        	+ "\n  Use: " + this.getNumberOfUses()
+        	+ "\n";
     }
 }
