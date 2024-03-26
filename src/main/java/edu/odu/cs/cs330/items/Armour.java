@@ -54,6 +54,7 @@ public class Armour extends Item {
     	this.modifier = "";
     	this.modiferLevel = 0;
     	this.element = "";
+    	this.stackable = false;
     	
     }
 
@@ -65,6 +66,14 @@ public class Armour extends Item {
     public Armour(Armour src)
     {
         // Set and/or copy data members for *this* object based on *src*.
+    	this.name = src.name;
+    	this.durability = src.durability;
+    	this.defense = src.defense;
+    	this.material = src.material;
+    	this.modifier = src.modifier;
+    	this.modiferLevel = src.modiferLevel;
+    	this.element = src.element;
+    	this.stackable = src.stackable;
     }
 
     /**
